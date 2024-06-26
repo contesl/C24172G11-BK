@@ -6,9 +6,18 @@ from psycopg2 import connect, extras
 from static.db import * 
 
 #----------------------------------------------     
-def home(): #la pagina de arranque
-    return send_file('static/usuarios.html')
+# defhome(): #la pagina de arranque
+#    return send_file('static/usuarios.html')
 #===================================   
+
+#---- CONSULTA MASIVA DE ITEMS--------
+def get_Item():
+    conn=get_connection()
+    cur=conn.cursor(cursor_factory=extras.RealDictCursor)
+    cur.execute('SELECT * from public."Item"')
+    result=cur.fetchall()
+  
+    return jsonify(result)
 
 #---- CONSULTA MASIVA--------
 def get_users():
@@ -101,3 +110,4 @@ def get_user(userId):
     if result is None:
         return jsonify({'message':"Usuario Inexistente"})
     return jsonify(result)
+

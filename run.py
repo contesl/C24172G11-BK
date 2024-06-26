@@ -14,9 +14,10 @@ from psycopg2 import connect, extras
 from static.views import *
 
 app=Flask(__name__)
+#app.route('/', methods=['GET'])(home)
 
-app.route('/', methods=['GET'])(home)
-
+#---------consulta masiva de item
+app.route('/api/Item', methods=['GET'])(get_Item)
 
 #---------pagina de arranque
 app.route('/api/users', methods=['GET'])(get_users)
@@ -33,6 +34,8 @@ app.route('/api/users/<userId>', methods=['PUT'])(update_user)
 #--COnsulta de un usuario en particular------
 app.route('/api/users/<userId>', methods=['GET'])(get_user)
 
+
+CORS(app)
+
 if __name__ == '__main__':
     app.run(debug=True)
-    CORS(app)
