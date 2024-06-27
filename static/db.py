@@ -15,8 +15,9 @@ port=environ.get('dbPort')
 dbname=environ.get('dbName')
 user=environ.get('dbUser')
 password=environ.get('dbPwd')
+URL=environ.get('URL')
 
 def get_connection():
     #conn = connect(host=host,port=port,dbname=dbname,user=user,password=password)
-    conn = connect("postgresql://c241172g11bk:GIET6VAqo6XnMkEG0CFGcvVGhL5v6iVp@dpg-cpuojm5ds78s73e1jtlg-a.oregon-postgres.render.com/sportspro")
+    conn = connect(URL)
     return conn
