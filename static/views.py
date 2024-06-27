@@ -14,7 +14,7 @@ from static.db import *
 def get_Item():
     conn=get_connection()
     cur=conn.cursor(cursor_factory=extras.RealDictCursor)
-    cur.execute('SELECT * from public."Item"')
+    cur.execute('SELECT * from items')
     result=cur.fetchall()
   
     return jsonify(result)

@@ -1,0 +1,22 @@
+Render internal
+postgresql://c241172g11bk:GIET6VAqo6XnMkEG0CFGcvVGhL5v6iVp@dpg-cpuojm5ds78s73e1jtlg-a/sportspro
+
+Render external
+
+Service outside
+postgresql://c241172g11bk:GIET6VAqo6XnMkEG0CFGcvVGhL5v6iVp@dpg-cpuojm5ds78s73e1jtlg-a.oregon-postgres.render.com/sportspro
+
+Command line
+PGPASSWORD=GIET6VAqo6XnMkEG0CFGcvVGhL5v6iVp psql -h dpg-cpuojm5ds78s73e1jtlg-a.oregon-postgres.render.com -U c241172g11bk sportspro
+
+----------------------------------------------------------
+
+dpg-cpuojm5ds78s73e1jtlg-a : host
+dpg-cpuojm5ds78s73e1jtlg-a.oregon-postgres.render.com para conectarme remoto
+5432			   :port
+sportspro	           : database
+c241172g11bk               : username
+GIET6VAqo6XnMkEG0CFGcvVGhL5v6iVp : password
+postgresql://c241172g11bk:GIET6VAqo6XnMkEG0CFGcvVGhL5v6iVp@dpg-cpuojm5ds78s73e1jtlg-a.oregon-postgres.render.com/sportspro :external db url
+
+---------------------------------------------------------

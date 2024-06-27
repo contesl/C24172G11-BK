@@ -1,4 +1,4 @@
-INSERT INTO "Item" (
+INSERT INTO public.items (
     "Itemnum", "ItemName", "Price", "Onhand", "Allocated", "ReOrder", "OnOrder", 
     "CatPage", "CatDescription", "Category1", "Category2", "Special", "Weight", 
     "Minqty", "imagen"

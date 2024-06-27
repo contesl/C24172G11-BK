@@ -1,4 +1,4 @@
-CREATE TABLE "Item" (
+CREATE TABLE public.items (
   "Itemnum" INTEGER NOT NULL CHECK ("Itemnum" >= 0),
   "ItemName" VARCHAR(25) NOT NULL,
   "CatPage" INTEGER DEFAULT 0,
