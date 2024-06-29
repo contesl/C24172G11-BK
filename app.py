@@ -17,7 +17,10 @@ app=Flask(__name__)
 #app.route('/', methods=['GET'])(home)
 
 #---------consulta masiva de item
-app.route('/api/Item', methods=['GET'])(get_Item)
+app.route('/api/Item', methods=['GET'])(get_allItem)
+
+#---------consulta de un item de itemes de una categoria
+app.route('/api/Item/<categoria>', methods=['GET'])(get_catItem)
 
 #---------pagina de arranque
 app.route('/api/users', methods=['GET'])(get_users)

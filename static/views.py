@@ -11,12 +11,22 @@ from static.db import *
 #===================================   
 
 #---- CONSULTA MASIVA DE ITEMS--------
-def get_Item():
+def get_allItem():
     conn=get_connection()
     cur=conn.cursor(cursor_factory=extras.RealDictCursor)
     cur.execute('SELECT * from items')
     result=cur.fetchall()
   
+    return jsonify(result)
+
+#---- CONSULTA DE ITEMS DE UNA CATEGORIA--------
+def get_catItem(categoria):
+    conn=get_connection()
+    cur=conn.cursor(cursor_factory=extras.RealDictCursor)
+    cur.execute('SELECT * from items where "Category1" =%s', (categoria,))
+    result=cur.fetchall()
+    if result is None:
+        return jsonify({'message':"Sin items para la categoria"})
     return jsonify(result)
 
 #---- CONSULTA MASIVA--------
