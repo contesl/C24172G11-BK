@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
+# usamos extras.RealDictCursor porque devuelve un diccionario Python
+# en lugar de tuplas y esto hace mas simple convertir a json
 from psycopg2 import connect, extras
 # en db.py tenemos las variables de coneccion y la coneccion a la db
 # la funcion get_connection esta ahi dentro
