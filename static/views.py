@@ -65,6 +65,7 @@ def create_user():
     return jsonify(nuevoUsuario)
 
  #----- BAJA ------------
+ # RETURNING devuelve las filas que fueron borradas
 #--@app.delete('/api/users/<userId>')
 def delete_user(userId):
     conn=get_connection()
